@@ -10,39 +10,25 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 import { Quote } from "lucide-react"
+import User from "@/data/User"
+import Autoplay from "embla-carousel-autoplay"
 
 export default function Testimonials() {
-    const testimonials = [
-        {
-            content: "Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.",
-            author: "Name",
-            position: "CEO",
-            image: "/placeholder.svg"
-        },
-        {
-            content: "In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Lorem ipsum dolor sit amet consectetur.",
-            author: "Sarah Johnson",
-            position: "CTO",
-            image: "/placeholder.svg"
-        },
-        {
-            content: "Augue dictum dolor elementum convallis dignissim. Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan malesuada.",
-            author: "Michael Chen",
-            position: "Director",
-            image: "/placeholder.svg"
-        }
-    ]
-
     return (
         <section className="container px-4 mx-auto py-16">
             <div className="text-center max-w-2xl mx-auto mb-12">
                 <h2 className="text-3xl font-bold mb-4">Testimonials</h2>
                 <p className="text-muted-foreground">
-                    Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium
+                    {User.subtitle.testimonials_subtitle}
                 </p>
             </div>
 
             <Carousel
+                plugins={[
+                    Autoplay({
+                        delay: 4000,
+                    }),
+                ]}
                 opts={{
                     align: "center",
                     loop: true,
@@ -50,7 +36,7 @@ export default function Testimonials() {
                 className="w-full max-w-5xl mx-auto"
             >
                 <CarouselContent className="-ml-2 md:-ml-4">
-                    {testimonials.map((testimonial, index) => (
+                    {User.testimonials.map((testimonial, index) => (
                         <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-2/3 lg:basis-1/2">
                             <Card className="border-none bg-muted/50">
                                 <CardContent className="flex flex-col md:flex-row gap-6 p-6">
@@ -81,7 +67,7 @@ export default function Testimonials() {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <CarouselPrevious className="hidden md:flex -left-12" />
+                <CarouselPrevious className="hidden md:flex -left-12 rounded-full  aspect-square" />
                 <CarouselNext className="hidden md:flex -right-12" />
             </Carousel>
         </section>

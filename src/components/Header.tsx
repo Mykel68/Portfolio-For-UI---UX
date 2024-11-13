@@ -6,9 +6,13 @@ import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { Menu } from 'lucide-react'
 import navBarLink from "@/data/navBarLink"
+import User from "@/data/User"
+import { splitWord } from '@/lib/splitWord'
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false)
+    const { firstPart, secondPart } = splitWord(User.profile.name);
+
 
     const NavLinks = () => (
         <>
@@ -26,11 +30,14 @@ export default function Header() {
     )
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-            <div className="container flex h-14 items-center">
+        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 ">
+            <div className="container flex h-14 items-center mx-auto md:px-12">
                 <div className="mr-4 hidden md:flex  items-center justify-between w-full">
                     <Link href="/" className="mr-6 flex items-center space-x-2">
-                        <span className="text-lg font-bold">Name - Logo</span>
+                        <Link href="/" className="text-2xl font-bold">
+                            {firstPart}
+                            <span className="text-orange-500">{secondPart}</span>
+                        </Link>
                     </Link>
                     <nav className="flex items-center space-x-6 mx-auto text-sm font-medium">
                         <NavLinks />
@@ -59,7 +66,10 @@ export default function Header() {
                                     className="flex items-center"
                                     onClick={() => setIsOpen(false)}
                                 >
-                                    <span className="text-lg font-bold">Name - Logo</span>
+                                    <Link href="/" className="text-2xl font-bold">
+                                        {firstPart}
+                                        <span className="text-orange-500">{secondPart}</span>
+                                    </Link>
                                 </Link>
                             </div>
                             <nav className="flex flex-col gap-4 px-7 mt-10">

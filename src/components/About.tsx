@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Progress } from "@/components/ui/progress"
-import skills from "@/data/skills"
+import User from "@/data/User";
 
 export default function About() {
 
@@ -20,12 +20,11 @@ export default function About() {
                     <div className="space-y-4">
                         <h2 className="text-4xl md:text-6xl tracking-widest leading-normal font-bold">About Me</h2>
                         <p className="text-muted-foreground text-xl font-normal tracking-widest">
-                            Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nisi lectus netus in. Aliquet donec morbi
-                            convallis pretium. Turpis tempus pharetra
+                            {User.profile.about}
                         </p>
                     </div>
                     <div className="space-y-4">
-                        {skills.map((skill) => (
+                        {User.skills.map((skill) => (
                             <div key={skill.name} className="space-y-2">
                                 <div className="flex justify-between text-sm">
                                     <span className="text-2xl leading-normal tracking-wider font-bold ">{skill.name}</span>

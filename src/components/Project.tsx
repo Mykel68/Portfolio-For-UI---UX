@@ -4,39 +4,12 @@ import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Image from "next/image"
+import projects from "@/data/projects"
+import filters from "@/data/filter"
+import User from "@/data/User"
 
 export default function Projects() {
     const [activeFilter, setActiveFilter] = useState("all")
-
-    const projects = [
-        {
-            id: 1,
-            title: "AirCalling Landing Page Design",
-            category: "Web Design",
-            image: "/1/Web Designs-1.svg",
-        },
-        {
-            id: 2,
-            title: "Business Landing Page Design",
-            category: "Web Design",
-            image: "/2/Web Designs-1.svg",
-        },
-        {
-            id: 3,
-            title: "Ecom Web Page Design",
-            category: "App Design",
-            image: "/2/Web Designs-2.svg",
-        },
-        // Add more projects as needed
-    ]
-
-    const filters = [
-        { value: "all", label: "All" },
-        { value: "ui-ux", label: "UI/UX" },
-        { value: "web-design", label: "Web Design" },
-        { value: "app-design", label: "App Design" },
-        { value: "graphic-design", label: "Graphic Design" },
-    ]
 
     const filteredProjects = projects.filter((project) => {
         if (activeFilter === "all") return true
@@ -48,7 +21,7 @@ export default function Projects() {
             <div className="text-center max-w-2xl mx-auto mb-12">
                 <h2 className="text-3xl font-bold mb-4">My Projects</h2>
                 <p className="text-muted-foreground text-balance">
-                    Lorem ipsum dolor sit amet consectetur. Mollis erat duis aliquam mauris est risus lectus. Phasellus consequat urna tellus
+                    {User.subtitle.projects_subtitle}
                 </p>
             </div>
 

@@ -1,7 +1,7 @@
 import Link from "next/link"
-
+import { splitWord } from "@/lib/splitWord"
 import navBarLink from "../data/navBarLink"
-import socialMedia from "@/data/socialMedia"
+import User from "@/data/User"
 
 const navigation = navBarLink.map((item) => {
     return {
@@ -10,20 +10,24 @@ const navigation = navBarLink.map((item) => {
     }
 })
 
-const social = socialMedia.map((item) => {
+const social = User.social.map((item) => {
     return {
         name: item.name,
         href: item.href,
         icon: item.icon
     }
 })
+
 export default function Footer() {
+    const { firstPart, secondPart } = splitWord(User.profile.name);
+
     return (
         <footer className="bg-muted/40">
             <div className="container mx-auto px-4 py-12">
                 <div className="flex flex-col items-center gap-8">
                     <Link href="/" className="text-2xl font-bold">
-                        FAWZI<span className="text-orange-500">UX</span>
+                        {firstPart}
+                        <span className="text-orange-500">{secondPart}</span> {/* Orange part */}
                     </Link>
 
                     <nav className="flex flex-wrap justify-center gap-6">

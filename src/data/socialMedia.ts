@@ -1,6 +1,6 @@
 import { LinkedinIcon, FacebookIcon, TwitterIcon, InstagramIcon } from "lucide-react";
 
-interface SocialMedia {
+export interface SocialMedia {
     name: string;
     href: string;
     icon: React.ElementType; // Accepts a React component

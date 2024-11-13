@@ -1,6 +1,6 @@
 import { BarChart3, LayoutGrid, Monitor, Smartphone } from "lucide-react"
 
-interface Service {
+export interface Service {
     icon: any
     title: string
     description: string
@@ -10,22 +10,22 @@ const services: Service[] = [
     {
         icon: LayoutGrid,
         title: "UI/UX",
-        description: "Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum"
+        description: "Crafting seamless, user-friendly interfaces that make every digital experience intuitive and engaging."
     },
     {
         icon: Monitor,
         title: "Web Design",
-        description: "Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum"
+        description: "Designing responsive, visually compelling websites that provide both function and beauty."
     },
     {
         icon: Smartphone,
         title: "App Design",
-        description: "Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum"
+        description: "Building mobile app designs that prioritize usability, performance, and a delightful user experience."
     },
     {
         icon: BarChart3,
         title: "Graphic Design",
-        description: "Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum"
+        description: "Creating striking graphics that communicate your brand’s message with clarity and creativity."
     }
 ]
 

@@ -6,12 +6,12 @@ import Link from "next/link"
 
 export default function Hero() {
     return (
-        <div className="container px-4 mx-auto">
+        <div className="container md:px-4 mx-auto">
             <div className="flex flex-col md:flex-row items-center justify-between py-12 md:py-24 gap-8">
                 <div className="flex flex-col gap-4 max-w-xl">
-                    <div className="space-y-2">
+                    <div className="">
                         <p className="text-2xl font-semibold tracking-wider">Hi I am</p>
-                        <h1 className="text-4xl md:text-5xl font-bold tracking-wide">
+                        <p className="text-4xl md:text-5xl font-bold tracking-wide">
                             <span className="text-orange-500 text-3xl leading-normal font-semibold tracking-widest">
                                 Fawzi Sayed
                             </span>
@@ -19,8 +19,7 @@ export default function Hero() {
                             <span className="">UI & UX</span> {/* Add padding to create space */}
                             <br />
                             <span className="pl-32">Designer</span> {/* Add more padding for space */}
-                        </h1>
-
+                        </p>
                     </div>
                     <p className="text-muted-foreground text-xl font-medium tracking-wide">
                         Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nisi lectus netus in. Aliquet donec morbi convallis

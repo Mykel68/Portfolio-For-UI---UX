@@ -2,7 +2,6 @@
 
 import { useEffect } from "react"
 import Image from "next/image"
-import { Progress } from "@/components/ui/progress"
 import User from "@/data/User"
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer"

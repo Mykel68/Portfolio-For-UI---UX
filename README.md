@@ -10,6 +10,9 @@ Welcome to this free-to-use template for your portfolio website! You can easily 
 - **Framer Motion** - A library for animations and transitions in React applications.
 - **Tailwind CSS** - A utility-first CSS framework for rapidly building custom designs.
 
+## N.B. 
+You can change the primary color in the `app/globals.css` file and edit your favicon in the `app` folder.
+
 ## Features
 
 - Responsive design

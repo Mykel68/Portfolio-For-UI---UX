@@ -2,6 +2,14 @@
 
 Welcome to this free-to-use template for your portfolio website! You can easily update the content to fit your own personal information. All the data used to render your profile, services, projects, and more can be customized in the `/data` folder.
 
+
+## Tech Stack
+
+- **Next.js** - A React-based framework for building modern web applications.
+- **ShadCN UI** - A component library for building beautiful and customizable UIs.
+- **Framer Motion** - A library for animations and transitions in React applications.
+- **Tailwind CSS** - A utility-first CSS framework for rapidly building custom designs.
+
 ## Features
 
 - Responsive design
@@ -17,8 +25,6 @@ Welcome to this free-to-use template for your portfolio website! You can easily 
 - Testimonials Section
 
 - Contact Section
-
----
 
 ## How to Customize Your Portfolio
 
@@ -136,7 +142,7 @@ Welcome to this free-to-use template for your portfolio website! You can easily 
 
 - In the `contact.ts` file, you can update the contact form message or WhatsApp link.
 
----
+
 
 ## Navigation
 
@@ -166,19 +172,19 @@ Welcome to this free-to-use template for your portfolio website! You can easily 
 
 - The **Contact** section allows visitors to reach out to me either via email .
 
----
+
 
 ## Responsive Design
 
 This website is fully responsive and adjusts seamlessly to desktop, tablet, and mobile devices.
 
----
+
 
 ## Contact Information
 
-Feel free to reach out through the **Contact** section, either by sending me an email via the form or by clicking on the **Work With Me** button to open a WhatsApp chat.
+Feel free to reach out through the **Contact** section, either by sending me an email via the form or by clicking on the **Work With Me** button in the Hero / Home Section to open a WhatsApp chat.
 
----
+
 
 ## How to View Your Portfolio
 
@@ -199,10 +205,9 @@ npm run dev
 
 Visit `http://localhost:3000` (or your configured URL) in your browser to see your customized portfolio live!
 
----
+
 
 ### Thank You!
 
 Thanks for using this template! Customize it as much as you want, and feel free to reach out if you have any questions or need assistance.
 
----

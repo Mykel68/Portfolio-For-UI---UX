@@ -1,11 +1,18 @@
+// This file defines the structure and default list of services offered, 
+// providing a type-safe way to manage service data across the application.
+// The `Service` interface specifies the properties for each service, including an icon component 
+// to represent the service visually, a title, and a description that highlights the service's value.
+
 import { BarChart3, LayoutGrid, Monitor, Smartphone } from "lucide-react"
 
 export interface Service {
-    icon: any
-    title: string
-    description: string
+    icon: any;          // Icon component to visually represent the service (I used Lucide Icons)
+    title: string;      // Title of the service, e.g., "UI/UX" or "Web Design"
+    description: string; // Short description explaining the purpose or benefit of the service
 }
 
+// Default array of services, each following the `Service` structure.
+// Modify as needed to include your own services or customize the existing ones.
 const services: Service[] = [
     {
         icon: LayoutGrid,
@@ -27,6 +34,7 @@ const services: Service[] = [
         title: "Graphic Design",
         description: "Creating striking graphics that communicate your brand’s message with clarity and creativity."
     }
+    // Add more services.... but don't disrupt the UI
 ]
 
-export default services
+export default services;

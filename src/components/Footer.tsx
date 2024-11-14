@@ -27,7 +27,7 @@ export default function Footer() {
                 <div className="flex flex-col items-center gap-8">
                     <Link href="/" className="text-2xl font-bold">
                         {firstPart}
-                        <span className="text-orange-500">{secondPart}</span> {/* Orange part */}
+                        <span className="text-primary">{secondPart}</span>
                     </Link>
 
                     <nav className="flex flex-wrap justify-center gap-6">
@@ -49,7 +49,7 @@ export default function Footer() {
                                 <Link
                                     key={item.name}
                                     href={item.href}
-                                    className="text-muted-foreground hover:text-foreground transition-colors"
+                                    className="text-muted-foreground hover:text-primary transition-colors"
                                     aria-label={item.name}
                                 >
                                     <Icon className="h-5 w-5" />

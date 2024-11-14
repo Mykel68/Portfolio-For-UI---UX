@@ -1,3 +1,7 @@
+// Do not change this file
+// This file is used to generate the user data
+// To change the user data change the data in the /data folder but do not change this file
+
 import services from "@/data/service";
 import projects from "@/data/projects";
 import skills from "./skills";
